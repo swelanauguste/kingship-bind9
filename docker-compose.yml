@@ -1,7 +1,7 @@
 services:
   bind9:
     container_name: dns-1
-    image: ubuntu/bind9:latest
+    build: ./
     environment:
       - BIND9_USER=root
       - TZ=America/St_Lucia
