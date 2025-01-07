@@ -3,7 +3,7 @@ services:
     container_name: dns-1
     image: ubuntu/bind9:latest
     environment:
-      - BIND9_USER=cworks
+      - BIND9_USER=root
       - TZ=America/St_Lucia
     ports:
       - "53:53"
