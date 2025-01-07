@@ -13,3 +13,8 @@ services:
       - ./cache:/var/cache/bind
       - ./records:/var/lib/bind
     restart: always
+
+volumes:
+  config:
+  cache:
+  records:
