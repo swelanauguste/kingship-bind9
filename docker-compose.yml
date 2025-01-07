@@ -1,0 +1,15 @@
+services:
+  bind9:
+    container_name: dns-1
+    image: ubuntu/bind9:latest
+    environment:
+      - BIND9_USER=cworks
+      - TZ=America/St_Lucia
+    ports:
+      - "53:53"
+      - "53:53/udp"
+    volumes:
+      - ./config:/etc/bind
+      - ./cache:/var/cache/bind
+      - ./records:/var/lib/bind
+    restart: always
